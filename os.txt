@@ -1,16 +1,47 @@
 Files have a name and a path.
 The root folder is the lowest folder.
 In a file path, the folders and filename are separated by backslashes on Windows and forward slashes on Linux and Mac.
-Use the os.path.join() function to combine folders with the correct slash.
-The current working directory is the oflder that any relative paths are relative to.
-os.getcwd() will return the current working directory.
-os.chdir() will change the current working directory.
+
+The current working directory is the folder that any relative paths are relative to.
 Absolute paths begin with the root folder, relative paths do not.
 The . folder represents "this folder", the .. folder represents "the parent folder".
+
+import os
+
+os.getcwd() will return the current working directory. # pwd
+os.chdir() will change the current working directory. # cd
+os.makedirs() can make folders.
+os.path.dirname() gets path from full path string
+os.path.basename() gets filename from full path string
 os.path.abspath() returns an absolute path form of the path passed to it.
 os.path.relpath() returns the relative path between two paths passed to it.
-os.makedirs() can make folders.
+os.listdir() returns a list of strings of all folders and files within given directory # ls
+
 os.path.getsize() returns a file's size.
-os.listdir() returns a list of strings of filenames.
 os.path.exists() returns True if the filename passed to it exists.
 os.path.isfile() and os.path.isdir() return True if they were passed a filename or file path.
+
+Use the os.path.join() function to combine folders with the correct slash (path separator from os.sep). #obsolete, use module pathlib
+>>> from pathlib import Path
+>>> Path('spam') / 'bacon' / 'eggs'
+WindowsPath('spam/bacon/eggs')
+Path.home() # home directory
+Path.cwd().is_absolute() # returns True if it represents an absolute path or False if it represents a relative path
+
+
+>>> p = Path('C:/Users/Al/spam.txt')
+>>> p.anchor -> 'C:\\'
+>>> p.parent -> WindowsPath('C:/Users/Al') # This is a Path object, not a string.
+>>> p.name -> 'spam.txt'
+>>> p.stem -> 'spam'
+>>> p.suffix -> '.txt'
+>>> p.drive -> 'C:'
+>>> list(p.glob('*')) # Make a list of all files in p Path object
+>>> list(p.glob('*.txt') # Lists all text files in p Path object
+>>> list(p.glob('project?.docx') # Lists all *.docx files with name projectX where X is any character (like regex)
+>>> list(p.glob('*.?x?') # lists all files with any name and 3 character extension where second character is x
+
+# CHECKING PATH VALIDITY
+p.exists() # returns True if the path exists or returns False if it doesn’t exist.
+p.is_file() # returns True if the path exists and is a file, or returns False otherwise.
+p.is_dir() # returns True if the path exists and is a directory, or returns False otherwise.
