@@ -45,3 +45,10 @@ Path.cwd().is_absolute() # returns True if it represents an absolute path or Fal
 p.exists() # returns True if the path exists or returns False if it doesn’t exist.
 p.is_file() # returns True if the path exists and is a file, or returns False otherwise.
 p.is_dir() # returns True if the path exists and is a directory, or returns False otherwise.
+
+# DELETING FILES
+os.unlink('C:/Users/Al/spam.txt') # delete single file
+os.rmdir(<path>) # remove EMPTY directory/folder
+
+import send2trash # this module needs to be pip installed
+send2trash.send2trash(<path>) # moves file to bin instead of deleting it permanently
