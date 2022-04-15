@@ -52,3 +52,14 @@ os.rmdir(<path>) # remove EMPTY directory/folder
 
 import send2trash # this module needs to be pip installed
 send2trash.send2trash(<path>) # moves file to bin instead of deleting it permanently
+
+# LOOP THROUGH CONTENTS OF DIRECTORY
+# use os.walktree() to loop through all folder, subfolders and files in given directory
+import os
+folder_path='D:\Filmy'
+
+for folder_name, subfolders, filenames in os.walk(folder_path):
+    print(folder_name)
+    print(subfolders) # list of subfolders
+    print(filenames) # list of files in current folder
+    print() # print newline for better readabilty
