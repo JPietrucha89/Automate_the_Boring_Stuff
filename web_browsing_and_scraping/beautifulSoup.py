@@ -1,0 +1,35 @@
+import bs4, requests
+import re
+
+def getAlePlanszowkiPrice(productURL):
+    res=requests.get(productURL)
+    res.raise_for_status()
+
+    soup=bs4.BeautifulSoup(res.text, 'html.parser') # create soup object, parse text in search of information
+    elems = soup.select('#our_price_display') # create list of all matching ocurrencies of CSS selector
+    return elems[0].text.strip() # pick first element from list
+
+def getIkeaPrice(productURL):
+    res=requests.get(productURL)
+    res.raise_for_status()
+
+    soup=bs4.BeautifulSoup(res.text, 'html.parser') # create soup object, parse text in search of information
+    priceElems = soup.select('#content > div > div.pip-page-container__inner > div > div.pip-product__subgrid.product-pip.js-product-pip > div.pip-product__buy-module-container > div > div.js-price-package.pip-pip-price-package > div > div.pip-pip-price-package__price-wrapper > div > span > span.pip-price__integer') # create list of all matching ocurrencies of CSS selector in HTML tags
+
+    productList=productURL.split('/')
+    for item in productList:
+        if '-' in item:
+            regexProduct=re.compile(r'(\w+)-')
+            mo=regexProduct.search(item)
+            productName=mo[1].upper()
+            return 'Cena produktu ' + productName + ' wynosi ' + priceElems[0].text.strip()
+
+# main
+listIKEA = ['https://www.ikea.com/pl/pl/p/markus-krzeslo-biurowe-vissle-ciemnoszary-70261150/','https://www.ikea.com/pl/pl/p/jaervfjaellet-krzeslo-biurowe-z-podlokietnikami-80510639/','https://www.ikea.com/pl/pl/p/dagotto-podnozek-czarny-40240989/','https://www.ikea.com/pl/pl/p/baggmuck-mata-na-buty-do-wewnatrz-na-zewnatrz-szary-60329711/']
+
+for productURL in listIKEA:
+    price=getIkeaPrice(productURL)
+    print(price)
+
+#productURL='https://aleplanszowki.pl/dodatki-do-gier/3665-star-wars-rebelia-imperium-u-wladzy.html'
+#price=getAlePlanszowkiPrice(productURL)
