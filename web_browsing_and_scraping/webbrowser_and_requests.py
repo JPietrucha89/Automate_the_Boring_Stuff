@@ -1,5 +1,5 @@
 import webbrowser
-import requests
+import requests # downloads webpage into big chunk of text
 import os
 
 # open given URL in default browser
