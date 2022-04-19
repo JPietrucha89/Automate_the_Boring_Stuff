@@ -14,8 +14,8 @@ def getIkeaPrice(productURL):
     res.raise_for_status()
 
     soup=bs4.BeautifulSoup(res.text, 'html.parser') # create soup object, parse text in search of information
+# You can retrieve a web page element from a BeautifulSoup object by calling the select() method and passing a string of a CSS selector for the element you are looking for. Selectors are like regular expressions: they specify a pattern to look for—in this case, in HTML pages instead of general text strings.
     priceElems = soup.select('#content > div > div.pip-page-container__inner > div > div.pip-product__subgrid.product-pip.js-product-pip > div.pip-product__buy-module-container > div > div.js-price-package.pip-pip-price-package > div > div.pip-pip-price-package__price-wrapper > div > span > span.pip-price__integer') # create list of all matching ocurrencies of CSS selector in HTML tags
-
     productList=productURL.split('/')
     for item in productList:
         if '-' in item:
