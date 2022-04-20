@@ -1,6 +1,6 @@
-from tkinter.tix import COLUMN
 import openpyxl
 from pathlib import Path
+from openpyxl.utils import get_column_letter, column_index_from_string
 
 file=Path(Path.cwd(),'working_with_Excel','example.xlsx')
 # open individual excel file and create workbook object
@@ -22,6 +22,8 @@ print(sheet['C1'].value)
 cell=sheet['B1']
 print('Row is ' + str(cell.row) + ', column is ' + str(cell.column) + ', address is ' + cell.coordinate)
 print(f'Row is {cell.row}, column is {cell.column}, address is {cell.coordinate}')
+print(get_column_letter(900)) # return letter of column with given index
+print(column_index_from_string('AA')) # return index of column with given letter
 
 activeSheet = wb.active # Get the activeSheet
 print(activeSheet.title)
