@@ -17,8 +17,8 @@ browser.back()
 
 # look for search inputBox and pass string argument to it, then click button Search
 elemSearch= browser.find_element_by_css_selector('#search_query_mobile_bar')
-elemSearch.send_keys('Rebelia')
-elemSearch.submit()
+elemSearch.send_keys('Rebelia') # type string into search bar
+elemSearch.submit() # same as clicking Search button
 
 browser.back()
 browser.forward()
