@@ -62,3 +62,7 @@ wb.save(Path(Path.cwd(),'working_with_Excel','new_workbook_with_2_sheets.xlsx'))
 sheet3=wb.create_sheet(index=0,title='My newest sheet name') # index allows to pick position of new worksheet - just like before/after:= in VBA
 print(wb.sheetnames)
 wb.save(Path(Path.cwd(),'working_with_Excel','new_workbook_with_3_sheets.xlsx'))
+
+#deleting sheet
+sheet4=wb.create_sheet()
+del wb[sheet4.title]
