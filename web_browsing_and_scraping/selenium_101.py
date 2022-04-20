@@ -1,5 +1,5 @@
 from selenium import webdriver
-PATH='D:\Kodzenie\chromedriver.exe'
+PATH='D:\Kodzenie\chromedriver.exe' # need to download chromedriver from Chrome's site: https://chromedriver.chromium.org/downloads
 
 browser= webdriver.Chrome(PATH)
 browser.get('https://aleplanszowki.pl/')
@@ -17,8 +17,8 @@ browser.back()
 
 # look for search inputBox and pass string argument to it, then click button Search
 elemSearch= browser.find_element_by_css_selector('#search_query_mobile_bar')
-elemSearch.send_keys('Rebelia')
-elemSearch.submit()
+elemSearch.send_keys('Rebelia') # type string into search bar
+elemSearch.submit() # same as clicking Search button
 
 browser.back()
 browser.forward()
