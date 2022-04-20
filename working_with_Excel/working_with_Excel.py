@@ -33,7 +33,7 @@ for i in range(1,8):
 
 # create new worbook in memory
 wb=openpyxl.Workbook()
-print(wb.sheetnames) #defalut name of first sheet is Sheet
+print(wb.sheetnames) #default name of first sheet is Sheet
 sheet=wb['Sheet']
 sheet['A1'].value=10 # changing a cell's value is done using square brackets, just like changing values of list or dictionary
 sheet['A2'].value='Python'
