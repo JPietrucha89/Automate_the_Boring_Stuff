@@ -33,6 +33,18 @@ print(sheet.cell(5,2).value)
 for i in range(1,8):
     print(i,sheet.cell(i,2).value)
 
+# create range and loop through all cells within 
+range=sheet['A1':'C3']
+for rowOfCellObjects in range:
+    for cellObj in rowOfCellObjects:
+        print(cellObj.coordinate, cellObj.value)
+    print('--- END OF ROW ---')
+
+# To access the values of cells in a particular row or column, you can also use a Worksheet object’s rows and columns attribute. These attributes must be converted to lists with the list() function before you can use the square brackets and an index with them.
+print(list(sheet.columns)[1]) # Get second column's cells.
+for cellObj in list(sheet.columns)[1]:
+    print(cellObj.value)
+
 # create new worbook in memory
 wb=openpyxl.Workbook()
 print(wb.sheetnames) #default name of first sheet is Sheet
