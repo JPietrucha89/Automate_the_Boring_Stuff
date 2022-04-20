@@ -14,6 +14,9 @@ print(str(sheet['A1'].value))
 print(sheet['B1'].value)
 print(sheet['C1'].value)
 
+activeSheet = wb.active # Get the activeSheet
+print(activeSheet.title)
+
 # using .cell() method allows to pass columns name as number - useful for loops
 print(sheet.cell(5,2).value)
 for i in range(1,8):
