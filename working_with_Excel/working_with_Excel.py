@@ -1,3 +1,4 @@
+from tkinter.tix import COLUMN
 import openpyxl
 from pathlib import Path
 
@@ -13,6 +14,10 @@ print(sheet['A1'].value)
 print(str(sheet['A1'].value))
 print(sheet['B1'].value)
 print(sheet['C1'].value)
+
+cell=sheet['B1']
+print('Row is ' + str(cell.row) + ', column is ' + str(cell.column) + ', address is ' + cell.coordinate)
+print(f'Row is {cell.row}, column is {cell.column}, address is {cell.coordinate}')
 
 activeSheet = wb.active # Get the activeSheet
 print(activeSheet.title)
