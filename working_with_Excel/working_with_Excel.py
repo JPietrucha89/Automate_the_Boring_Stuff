@@ -1,3 +1,4 @@
+from tkinter.tix import COLUMN
 import openpyxl
 from pathlib import Path
 
@@ -9,10 +10,18 @@ wb=openpyxl.load_workbook(file)
 print(wb.sheetnames)
 sheet=wb['Sheet1']
 print(type(sheet))
+
+print(sheet.max_row) # Get the highest row number
+print(sheet.max_column) # Get the highest column number
+
 print(sheet['A1'].value)
 print(str(sheet['A1'].value))
 print(sheet['B1'].value)
 print(sheet['C1'].value)
+
+cell=sheet['B1']
+print('Row is ' + str(cell.row) + ', column is ' + str(cell.column) + ', address is ' + cell.coordinate)
+print(f'Row is {cell.row}, column is {cell.column}, address is {cell.coordinate}')
 
 activeSheet = wb.active # Get the activeSheet
 print(activeSheet.title)
