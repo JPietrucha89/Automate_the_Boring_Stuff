@@ -5,3 +5,4 @@ working_with_excel/*.xlsx
 project_12_read_data_from_spreadsheet/census2010_classes.xlsx
 Automate_the_Boring_Stuff_2e_onlinematerials
 project_13_update_spreadsheet/*.xlsx
+__pycache__
