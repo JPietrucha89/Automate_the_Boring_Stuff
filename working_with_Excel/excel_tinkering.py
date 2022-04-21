@@ -27,14 +27,14 @@ for i in range(4, 8):
     sheet.cell(i, 1).value = i
 sheet['A8'] = '=SUM(A4:A7)'  # set formula
 
-# ROW HEIGHT AND COLUMN WIDTH
+# ROW HEIGHT AND COLUMN WIDTH --------------------------------------------------------
 sheet.row_dimensions[1].height = 70
 sheet.column_dimensions['B'].width = 20
 
-# MERGING AND UNMERGING CELLS
+# MERGING AND UNMERGING CELLS --------------------------------------------------------
 sheet.merge_cells('A1:D3')  # Merge all these cells.
 
-# FREEZE PANES
+# FREEZE PANES --------------------------------------------------------
 # Note that all rows above and all columns to the left of this cell will be frozen, but the row and column of the cell itself will not be frozen.
 sheet.freeze_panes = 'A2'  # Freeze the rows above A2.
 # to unfreeze
@@ -44,7 +44,7 @@ sheet.freeze_panes = None
 wb.save(Path(os.getcwd(), 'working_with_Excel', 'excel_tinkering.xlsx'))
 wb.close
 
-# CHART
+# CHART --------------------------------------------------------
 # OpenPyXL supports creating bar, line, scatter, and pie charts using the data in a sheet’s cells. To make a chart, you need to do the following:
 
 # Create a Reference object from a rectangular selection of cells.
