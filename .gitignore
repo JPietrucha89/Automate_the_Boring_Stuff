@@ -1,8 +1,9 @@
+Automate_the_Boring_Stuff_2e_onlinematerials
 project_10_random_quiz_files/*.txt
 project_11_rename_files_with_american_dates/*.txt
+project_12_read_data_from_spreadsheet/census2010_classes.xlsx
+project_13_update_spreadsheet/*.xlsx
 web_browsing_and_scraping/*.txt
 working_with_excel/*.xlsx
-project_12_read_data_from_spreadsheet/census2010_classes.xlsx
-Automate_the_Boring_Stuff_2e_onlinematerials
-project_13_update_spreadsheet/*.xlsx
+working_with_PDF/*.pdf
 __pycache__
