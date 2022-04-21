@@ -1,11 +1,10 @@
 import shutil
-
 # The shutil (or shell utilities) module has functions to let you copy, move, rename, and delete files in your Python programs.
 
 # Calling shutil.copy(source, destination) will copy the file at the path source to the folder at the path destination. (Both source and destination can be strings or Path objects.) If destination is a filename, it will be used as the new name of the copied file. This function returns a string or Path object of the copied file.
 # .copy() and copytree() can both be used for renaming
-source_path='D:\Kodzenie\Python\AutomateBoringStuff\first_program.py'
-destination_path='D:\Kodzenie\Python\AutomateBoringStuff\backup_folder\first_program.py'
+source_path = r'D:\Kodzenie\Python\AutomateBoringStuff\first_program.py'
+destination_path = r'D:\Kodzenie\Python\AutomateBoringStuff\backup_folder\first_program.py'
 shutil.copy(source_path, destination_path)
 shutil.copytree(source_path, destination_path)
 
