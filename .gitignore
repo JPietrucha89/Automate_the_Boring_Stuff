@@ -6,4 +6,5 @@ project_13_update_spreadsheet/*.xlsx
 web_browsing_and_scraping/*.txt
 working_with_excel/*.xlsx
 working_with_PDF/*.pdf
+working_with_Word/*.docx
 __pycache__
