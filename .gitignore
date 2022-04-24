@@ -8,3 +8,4 @@ working_with_excel/*.xlsx
 working_with_PDF/*.pdf
 working_with_Word/*.docx
 __pycache__
+*.png
