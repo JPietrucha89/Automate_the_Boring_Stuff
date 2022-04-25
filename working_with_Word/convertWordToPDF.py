@@ -1,5 +1,5 @@
-# Code to create Word document goes here. comment with docx function calls to create your own content for the PDF in a Word document.
-# To write a program that produces PDFs with your own content, you must use the docx module to create a Word document, then use the Pywin32 package’s win32com.client module to convert it to a PDF. Replace the
+# Replace the "Code to create Word document goes here." comment with docx function calls to create your own content for the PDF in a Word document.
+# To write a program that produces PDFs with your own content, you must use the docx module to create a Word document, then use the Pywin32 package’s win32com.client module to convert it to a PDF.
 import win32com.client  # install with "pip install pywin32==224"
 import docx
 
