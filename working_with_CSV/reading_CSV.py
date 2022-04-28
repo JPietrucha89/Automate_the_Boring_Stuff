@@ -24,6 +24,7 @@ for row in exampleReader:
 
 # IF CSV FILE HAS HEADERS IT IS BETTER TO USE DICTREADER INSTEAD OF READER
 # Inside the loop, DictReader object sets row to a dictionary object with keys derived from the headers in the first row.
+
 print()
 exampleFile = open(
     Path(os.getcwd(), 'working_with_CSV', 'exampleWithHeader.csv'))
