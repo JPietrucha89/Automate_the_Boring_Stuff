@@ -25,7 +25,6 @@ def encrypt_PDFs(path, encryption_password):
                         writer.addPage(pageObj)
                     writer.encrypt(encryption_password)
                     writer.write(outputFile)
-    pass
 
 # Then, write a program that finds all encrypted PDFs in a folder (and its subfolders) and creates a decrypted copy of the PDF using a provided password. If the password is incorrect, the program should print a message to the user and continue to the next PDF.
 
@@ -49,7 +48,6 @@ def decrypt_PDFs(path, decryption_password):
                         pageObj = reader.getPage(i)
                         writer.addPage(pageObj)
                     writer.write(outputFile)
-    pass
 
 
 # main
