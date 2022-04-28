@@ -21,3 +21,12 @@ exampleReader = csv.reader(exampleFile)
 # Showing all *.csv files contents in a prettier way
 for row in exampleReader:
     print('Row #' + str(exampleReader.line_num) + ' ' + str(row))
+
+# IF CSV FILE HAS HEADERS IT IS BETTER TO USE DICTREADER INSTEAD OF READER
+# Inside the loop, DictReader object sets row to a dictionary object with keys derived from the headers in the first row.
+print()
+exampleFile = open(
+    Path(os.getcwd(), 'working_with_CSV', 'exampleWithHeader.csv'))
+exampleDictReader = csv.DictReader(exampleFile)
+for row in exampleDictReader:
+    print(row['Timestamp'], row['Fruit'], row['Quantity'])
