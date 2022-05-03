@@ -5,6 +5,7 @@ project_12_read_data_from_spreadsheet/census2010_classes.xlsx
 project_13_update_spreadsheet/*.xlsx
 project_14_PDF_paranoia/**/*.pdf
 project_15_fetching_current_weather/credentials.py
+project_17_simple_countdown/*.wav
 web_browsing_and_scraping/*.txt
 working_with_excel/*.xlsx
 working_with_PDF/*.pdf
