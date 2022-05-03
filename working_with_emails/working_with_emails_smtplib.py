@@ -16,7 +16,7 @@ conn.starttls()
 conn.login(credentials.username, credentials.password)
 
 # sending mail
-conn.sendmail('elpietruch@gmail.com', 'elpietruch@gmail.com',
+conn.sendmail(credentials.username, credentials.username,
               'Subject: Testowa wysyłka...\n\nDrogi Kubo, osiągnąłeś kolejny krok w procesie zostania leniwą kluchą. Umiesz wysyłać maile z Pythona :O\n\nOby tak dalej :D')
 
 # closing connection
