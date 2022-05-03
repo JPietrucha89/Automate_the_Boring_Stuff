@@ -12,5 +12,8 @@ working_with_PDF/*.pdf
 working_with_Word/*.docx
 working_with_CSV/*.csv
 working_with_emails/credentials.py
+working_with_emails/credentials.json
+working_with_emails/quickstart.py
+working_with_emails/working_with_emails_ezgmail.py
 __pycache__
 *.png
