@@ -11,5 +11,6 @@ working_with_excel/*.xlsx
 working_with_PDF/*.pdf
 working_with_Word/*.docx
 working_with_CSV/*.csv
+working_with_emails/credentials.py
 __pycache__
 *.png
