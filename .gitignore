@@ -17,3 +17,4 @@ working_with_emails/quickstart.py
 working_with_emails/working_with_emails_ezgmail.py
 __pycache__
 *.png
+*.jpg
