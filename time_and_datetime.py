@@ -99,6 +99,6 @@ print('Time passed: ', round(totalTime, 2))
 
 # total_seconds() This method for timedelta objects returns the number of seconds the timedelta object represents.
 
-# strftime(format) This method returns a string of the time represented by the datetime object in a custom format that’s based on the format string. See Table 17-1 for the format details.
+# strftime(format) This method returns a string of the time represented by the datetime object in a custom format that’s based on the format string.
 
 # datetime.datetime.strptime(time_string, format) This function returns a datetime object of the moment specified by time_string, parsed using the format string argument. See Table 17-1 for the format details.
