@@ -41,7 +41,11 @@ def PESEL_validation(pesel):
 # main
 PESEL_validation(12345678901)
 print()
+PESEL_validation(89113006798)
+print()
 hopefully_proper_pesel = input('Podaj swój PESEL:')
 PESEL_validation(hopefully_proper_pesel)
+print()
+PESEL_validation('89113006798')
 print()
 PESEL_validation('a2345678901')
